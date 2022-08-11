@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!--link to style sheet-->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <!--Navbar-->
+    <nav class="navbar bg-light">
+        <div class="container">
+
+            <!--logo-->
+          <a class="navbar-brand" href="index.html">
+            <img src="images\logo.png" alt="" width="130" height="55">
+          </a>
+
+          <!--search box-->
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit">Search</button>
+          </form>
+
+
+        
+        
+    </nav>
+
+    <!--container-->
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 2"></button>
+        </div>
+
+        <div class="carousel-inner">
+
+          <!-- First product -->
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="images\bg1.jpg" class="d-block" alt="bg1">
+            <div class="pro1">
+                <img id="pro1" src="images\pro1.png" alt="">
+            </div>
+            <div class="carousel-caption">
+              <h3>The brand new MacBook Pro</h3>
+              <p style="color:rgb(85, 165, 4) ;">with a special price <b>today only !</b></p>
+              <a href="#" type="button" class="btn btn-success">READ MORE</a>
+            </div>
+          </div>
+
+          <!-- Second product -->
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="images\bg2.jpg" class="d-block " alt="bg2">
+            <div class="pro1">
+                <img id="pro2" src="images\pro2.png" alt="pro2">
+            </div>
+            <div class="carousel-caption">
+              <h3>The iPhone 13 Pro<br>is available in our store</h3>
+              <a type="button" class="btn btn-primary"  href="#">READ MORE </a>
+            </div>
+          </div>
+
+          <!-- Third product -->
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="images\bg3.jpg" class="d-block " alt="bg3">
+            <div class="pro1">
+                <img id="pro3" src="images\pro3.png" alt="pro3">
+            </div>
+            <div class="carousel-caption">
+              <h3>Samsung Galaxy Tab<br>Tab 4.1.2 16Gb Black</h3>
+              <p style="color:green">with a special offer<b> today only !</b></p>
+              <a href="#" type="button" class="btn btn-dark">READ MORE</a>
+            </div>
+
+        </div>
+
+        <!--Carousal control Buttons-->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+
+    <!--Section for showing datas fetched from Json-->
+    <section>
+        <div class="users"></div>
+
+
+    </section>
+
+
+
+
+    <!--link to JavaScript-->
+    <script src="script.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>
