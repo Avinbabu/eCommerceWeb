@@ -31,7 +31,20 @@ nav{
 .carousel-caption>h3
 {font-size: calc(1.6rem + .6vw );}
 
+.cardgroup{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    grid-gap: 50px;
+    margin: 50px auto;
+    max-width: 1240px;
+    padding: 20px;
+ }
+ .card{
+    padding: 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+ }
 
+ 
 @media only screen and (max-width: 480px){
     #pro1,#pro3{
         position: absolute;
