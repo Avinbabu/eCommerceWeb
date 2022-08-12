@@ -55,7 +55,7 @@ nav{
  }
 
  
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 430px){
     #pro1,#pro3{
         position: absolute;
         top: 30%;
@@ -91,7 +91,7 @@ nav{
     }
     .card>img{
         height: 250px;
-        width : 320px;
+        width : 320px;}
 
 
 }
