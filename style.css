@@ -38,10 +38,9 @@ nav{
     margin: 50px auto;
     max-width: 1240px;
     padding: 20px;
-    border: solid 0.5px ;
  }
  .card>img{
-    height: 300px;
+    height: 250px;
     width : 345px;
     padding: 5px;
     border-radius: 15px;
@@ -85,6 +84,14 @@ nav{
         top: 80%;
         left:27%
     }
+    .cardgroup{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, auto));
+
+    }
+    .card>img{
+        height: 250px;
+        width : 320px;
 
 
 }
