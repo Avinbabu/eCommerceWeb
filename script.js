@@ -9,12 +9,12 @@ http.onload = function(){
         output += `
           <div class="card">
             <img src="${item.avatar}" alt="${item.id}">
-            <h5 class="card-title"><b>${item.first_name} ${item.last_name}</b></h5>
+            <h4 class="card-title"><b>${item.first_name} ${item.last_name}</b></h4>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">User id :${item.id}</li>
-              <li class="list-group-item">Email :${item.email}</li>
+              <li class="list-group-item">User id : ${item.id}</li>
+              <li class="list-group-item">Email :<a> ${item.email} </a></li>
             </ul>
-            <a href="#" class="btn btn-dark">READ MORE</a>
+            <a href="${item.avatar}" class="btn btn-dark">READ MORE</a>
           </div>
          `;
       }
