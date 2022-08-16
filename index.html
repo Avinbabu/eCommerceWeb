@@ -27,7 +27,7 @@
           <!--search box-->
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-primary" type="submit">Search</button>
+            <button class="btn btn-outline-primary" >Search</button>
           </form>
 
 
@@ -90,24 +90,50 @@
         </button>
 
     </div>
+  
+  <!--Searchbox2-->
+  <div class="searchbar" style="display: flex;justify-content: center;padding: 20px;background-color: rgb(73, 73, 73);">
+    <input id= "searchbar" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    <button onclick="search_user()" class="btn btn-outline-primary" >Search</button>
+  </div>
 
-    <!--Section for showing datas fetched from Json-->
-    
+  <!--Section for showing datas fetched from Json-->
+  <div class="cardgroup"></div>
 
-    <div class="cardgroup"
-      
+
+  <!-- The Modal -->
+  <div id="popup" class="modal" >
+    <!-- Modal content -->
+    <div id="modal-content" class="modal-content">
+      <span class="close" id="closePopup" onclick="closePopup()">&times;</span>
+      <img id="avatar_" src="" alt="user image"/>
+      <h4 id="userName" style="font-weight: bold;"></h4>
+      <ul>
+        <li id="email_id"></li>
+        <li id="user_id"></li>
+      </ul>
+
     </div>
-  
+  </div>
 
-    
-  
+<div id="popup2" class="modal">
+
+  <div id="modal-content2" class="modal-content">
+    <span class="close" id="closePopup2" onclick="closePopup2()">&times;</span>
+    <img id="avatar_2" src="" alt="user data not found" />
+    <h4 id="userName2" style="font-weight: bold;"></h4>
+    <ul>
+      <li id="email_id2"></li>
+      <li id="user_id2"></li>
+    </ul>
+
+  </div>
+</div>
 
 
-
-
-    <!--link to JavaScript-->
-    <script src="script.js"></script>
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <!--link to JavaScript-->
+  <script src="script.js"></script>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>
