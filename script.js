@@ -21,10 +21,10 @@ http.onload = function(){
             <button onclick="showuser(${item.id})"  class="btn btn-dark" >
             READ MORE</button>
           </div>
-         `;
-         k.push(item.first_name)
-         k.push(item.last_name)
-         k.push(item.email)
+        `;
+        k.push(item.first_name)
+        k.push(item.last_name)
+        k.push(item.email)
       }
       document.querySelector(".cardgroup").innerHTML = output;
       
@@ -60,6 +60,9 @@ function showuser(id){
   function search_user() {
     document.getElementById('popup2').style.display = 'block'
     let input = document.getElementById('searchbar').value
+    if(input ==""){
+      document.getElementById('popup2').style.display = 'none'
+    }
     for (let items of users1){
       if (input == items.id || input == items.first_name ||input == items.last_name ||input == items.email){
         console.log(items.first_name)
