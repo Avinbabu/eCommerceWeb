@@ -1,4 +1,5 @@
 let users1
+let k =[]
 let http = new XMLHttpRequest();
 http.open('get', "https://reqres.in/api/users?page=2", true);
 http.send();
@@ -21,6 +22,9 @@ http.onload = function(){
             READ MORE</button>
           </div>
          `;
+         k.push(item.first_name)
+         k.push(item.last_name)
+         k.push(item.email)
       }
       document.querySelector(".cardgroup").innerHTML = output;
       
@@ -53,7 +57,6 @@ function showuser(id){
 }
 
 
-
   function search_user() {
     document.getElementById('popup2').style.display = 'block'
     let input = document.getElementById('searchbar').value
@@ -74,6 +77,47 @@ function showuser(id){
     document.getElementById('searchbar').value = ''
   }
 
+
+  let sortedUsers = k.sort();
+  let input = document.getElementById('searchbar');
+  input.addEventListener("keyup", (e) => {
+    removeElements();
+    for (let i of sortedUsers) {
+      if (
+        i.toLowerCase().startsWith(input.value.toLowerCase()) &&
+        input.value != ""
+        ) {
+        //create li element
+        let listItem = document.createElement("li");
+        //One common class name
+        listItem.classList.add("list-items");
+        listItem.style.cursor = "pointer";
+        listItem.setAttribute("onclick", "displayNames('" + i + "')");
+        //Display matched part in bold
+        let word = "<b>" + i.substr(0, input.value.length) + "</b>";
+        word += i.substr(input.value.length);
+        //display the value in array
+        listItem.innerHTML = word;
+        document.querySelector(".list").appendChild(listItem);
+        }
+      }
+  });
+
+  function displayNames(value) {
+    input.value = value;
+    removeElements();
+  }
+  function removeElements() {
+    //clear all the item
+    let items = document.querySelectorAll(".list-items");
+    items.forEach((item) => {
+      item.remove();
+    });
+  }
+  
+      
+ 
+  
 
 
 

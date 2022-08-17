@@ -150,6 +150,20 @@ nav{
     height: 150px;
     width : 150px;
  }
-#modal-content2>ul>li{
+
+.list{
+    margin-left: 10%;
+    margin-right: 10%;
     list-style: none;
+    margin-top: 10px;
+    padding: 0;
+    background-color: white;
+    width: 80%;
+    border-radius: 2px;
+    height: auto;
 }
+.list li{
+   padding: 10px;
+   width: 50%;
+}
+
