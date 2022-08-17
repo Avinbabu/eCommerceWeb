@@ -22,9 +22,11 @@ http.onload = function(){
             READ MORE</button>
           </div>
         `;
+        k.push(item.first_name+" "+item.last_name)
         k.push(item.first_name)
         k.push(item.last_name)
         k.push(item.email)
+        
       }
       document.querySelector(".cardgroup").innerHTML = output;
       
@@ -64,7 +66,7 @@ function showuser(id){
       document.getElementById('popup2').style.display = 'none'
     }
     for (let items of users1){
-      if (input == items.id || input == items.first_name ||input == items.last_name ||input == items.email){
+      if (input == items.id || input == items.first_name ||input == items.last_name ||input == items.email||input==items.first_name+" "+items.last_name){
         console.log(items.first_name)
         document.getElementById('avatar_2').src = items.avatar
         document.getElementById('userName2').innerHTML = items.first_name + " " + items.last_name
@@ -72,6 +74,7 @@ function showuser(id){
         document.getElementById('user_id2').innerHTML = "User Id : " + items.id
 
       }
+      
     }
   }
 
@@ -117,9 +120,7 @@ function showuser(id){
       item.remove();
     });
   }
-  
-      
- 
+
   
 
 
